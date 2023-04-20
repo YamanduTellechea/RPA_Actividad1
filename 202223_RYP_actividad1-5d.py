@@ -80,10 +80,10 @@ class GameWalkPuzzle(SearchProblem):
         gx, gy = self.goal
 
         # Busqueda A* - Distancia euclídea
-        #return math.sqrt((x - gx) ** 2 + (y - gy) ** 2)
+        return math.sqrt((x - gx) ** 2 + (y - gy) ** 2)
 
         # Busqueda A* - Distancia Manhattan
-        return math.fabs(x - gx) + math.fabs(y - gy)
+        #return math.fabs(x - gx) + math.fabs(y - gy)
         
 
 
@@ -148,7 +148,7 @@ def main():
     problem = GameWalkPuzzle(MAP)
     used_viewer = BaseViewer()
     print("A* CON LA HEURÍSTICA EUCLÍDEA")
-    # print("A* CON LA HEURÍSTICA MANHATTAN")
+    #print("A* CON LA HEURÍSTICA MANHATTAN")
     result = astar(problem, graph_search=True, viewer=used_viewer)
     resultado_experimento(problem, MAP, result, used_viewer)
 

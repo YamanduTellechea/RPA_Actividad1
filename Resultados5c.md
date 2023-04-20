@@ -1,17 +1,11 @@
 # RPA_Actividad1
 Repositorio con el codigo de la actividad 1 de Razonamiento y Planificación.
 
-Resultados Script 5a 
+Resultados Script 5c 
 
 ```
 
-# RPA_Actividad1
-Repositorio con el codigo de la actividad 1 de Razonamiento y Planificación.
-
-Resultados Script 5a 
-
 BREADTH-FIRST SEARCH (AMPLITUD)
-'''
 ########
 #    T·#
 # ####·#
@@ -19,9 +13,8 @@ BREADTH-FIRST SEARCH (AMPLITUD)
 # ##···#
 #      #
 ########
-
 Total length of solution: 8
-Total cost of solution: 7.0
+Total cost of solution: 11.0
 max fringe size: 4
 visited nodes: 17
 iterations: 17
@@ -34,7 +27,6 @@ DEPTH-FIRST SEARCH (PROFUNDIDAD)
 # ##   #
 #      #
 ########
-
 Total length of solution: 10
 Total cost of solution: 9.0
 max fringe size: 3
@@ -42,36 +34,31 @@ visited nodes: 10
 iterations: 10
 
 A* CON LA HEURÍSTICA EUCLÍDEA
-
 ########
-#    T·#
-# ####·#
-#   P#·#
-# ##···#
+#····T #
+#·#### #
+#···P# #
+# ##   #
 #      #
 ########
-
-Total length of solution: 8
-Total cost of solution: 7.0
+Total length of solution: 10
+Total cost of solution: 9.0
 max fringe size: 5
-visited nodes: 11
-iterations: 11
+visited nodes: 19
+iterations: 19
 
 A* CON LA HEURÍSTICA MANHATTAN
-
 ########
-#    T·#
-# ####·#
-#   P#·#
-# ##···#
+#····T #
+#·#### #
+#···P# #
+# ##   #
 #      #
 ########
-```
-Total length of solution: 8
-Total cost of solution: 7.0
+Total length of solution: 10
+Total cost of solution: 9.0
 max fringe size: 5
-visited nodes: 11
-iterations: 11
+visited nodes: 19
+iterations: 19
 
 ```
-
