@@ -12,16 +12,13 @@ from simpleai.search.viewers import BaseViewer,ConsoleViewer,WebViewer
 
 
 MAP = """
-##############################
-#         #              #   #
-# ####    ########       #   #
-#  T #    #              #   #
-#    ###     ####   ######   #
-#         ####      #        #
-#            #  #   #   #### #
-#     ######    #       # P  #
-#        #      #            #
-##############################
+########
+#    T #
+# #### #
+#   P# #
+# ##   #
+#      #
+########
 """
 
 MAP = [list(x) for x in MAP.split("\n") if x]
@@ -130,19 +127,23 @@ def main():
     # Probad también ConsoleViewer para depurar
     # Probad también WebViewer para ver los árboles
     
-    # Mostramos tres experimentos
-    result = breadth_first(problem, graph_search=True,viewer=used_viewer)
-    resultado_experimento(problem,MAP,result,used_viewer)
-    
-    problem = GameWalkPuzzle(MAP)
-    used_viewer=BaseViewer() 
-    result = depth_first(problem, graph_search=True,viewer=used_viewer)
-    resultado_experimento(problem,MAP,result,used_viewer)
+   # Mostramos tres experimentos
+    print("BREADTH-FIRST SEARCH (AMPLITUD)")
+    result = breadth_first(problem, graph_search=True, viewer=used_viewer)
+    resultado_experimento(problem, MAP, result, used_viewer)
 
     problem = GameWalkPuzzle(MAP)
-    used_viewer=BaseViewer() 
-    result = astar(problem, graph_search=True,viewer=used_viewer)
-    resultado_experimento(problem,MAP,result,used_viewer)
+    used_viewer = BaseViewer()
+    print("DEPTH-FIRST SEARCH (PROFUNDIDAD)")
+    result = depth_first(problem, graph_search=True, viewer=used_viewer)
+    resultado_experimento(problem, MAP, result, used_viewer)
+
+    problem = GameWalkPuzzle(MAP)
+    used_viewer = BaseViewer()
+    print("A* CON LA HEURÍSTICA EUCLÍDEA")
+    # print("A* CON LA HEURÍSTICA MANHATTAN")
+    result = astar(problem, graph_search=True, viewer=used_viewer)
+    resultado_experimento(problem, MAP, result, used_viewer)
 
 
 if __name__ == "__main__":
