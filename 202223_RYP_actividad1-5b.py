@@ -13,7 +13,7 @@ from simpleai.search.viewers import BaseViewer,ConsoleViewer,WebViewer
 
 MAP = """
 ########
-#    T #
+#   T  #
 # #### #
 #   P# #
 # ##   #
@@ -77,7 +77,13 @@ class GameWalkPuzzle(SearchProblem):
     def heuristic(self, state):
         x, y = state
         gx, gy = self.goal
+
+        # Busqueda A* - Distancia euclídea
         return math.sqrt((x - gx) ** 2 + (y - gy) ** 2)
+
+        # Busqueda A* - Distancia Manhattan
+        # return math.fabs(x - gx) + math.fabs(y - gy)
+        
 
 
 def searchInfo (problem,result,use_viewer):
